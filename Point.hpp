@@ -5,7 +5,7 @@ namespace stl
 
 
 	template<typename T>
-	struct Compare_coordinates                                  // Compare function for our points in std::set
+	struct Compare_coordinates      // Compare function for our points in std::set
 	{
 		bool operator()(const T & L, const T & R) const			
 		{
@@ -15,15 +15,15 @@ namespace stl
 				return L->_y < R->_y;
 			if (L->_z != R->_z)
 				return L->_z < R->_z;
-			return  false;										// if points are eaqual returns false
+			return  false;			// if points are eaqual returns false
 
 		}
 	};
 	
 
-	struct point                            // struct point that contains 3 coordinates,
-	{										// set of pointers to adjacent points, mark (the shortest path), 
-		float _x;							// and bool flag - is this mark really the shortest path.
+	struct point		// struct point that contains 3 coordinates,
+	{					// set of pointers to adjacent points, mark (the shortest path), 
+		float _x;		// and bool flag - is this mark really the shortest path.
 		float _y;
 		float _z;
 
@@ -53,8 +53,8 @@ namespace stl
 
 
 
-	class ptr_point_set : public std::set<point*, Compare_coordinates<point*>>        // to do not think about memory i decided to 
-	{																				// make my own set with virtual destructor 
+	class ptr_point_set : public std::set<point*, Compare_coordinates<point*>>   // to do not think about memory i decided to 
+	{																			 // make my own set with virtual destructor 
 	public:
 		ptr_point_set() : std::set<point*, Compare_coordinates<point*>>() {};
 		virtual ~ptr_point_set()

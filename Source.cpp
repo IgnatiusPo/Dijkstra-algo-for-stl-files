@@ -1,13 +1,13 @@
 #include <iostream>
 #include "stl_info.hpp"
 #include <conio.h>
-#define ESC 27					//27 ASCII of Escape
-#define ONE 49					//49 ASCII of 1
+#define ESC 27	//27 ASCII of Escape
+#define ONE 49	//49 ASCII of 1
 
 int main()
 {
-	while(true) {				//i know, looks crappy, but that is only a wrapper instead of GUI to work with this program
-								// that's only test case
+	while(true) {	//i know, looks crappy, but that is only a wrapper instead of GUI to work with this program
+					// that's only test case
 		system("cls");			
 		std::cout << "Enter full path to stl-file like \"E:\\directory\\file.stl\"" << std::endl;
 		std::string path;
