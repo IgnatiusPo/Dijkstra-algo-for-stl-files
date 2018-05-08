@@ -71,7 +71,7 @@ namespace stl
 
 		}
 	public:
-		stl_info() : _header(""), _points(), _num_of_triangles() {};
+        stl_info() : _header(""), _points(), _num_of_triangles() {}
 		int get_size()
 		{
 			return _points.size();

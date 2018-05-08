@@ -1,5 +1,7 @@
 #pragma once
 #include <iostream>
+#include <windows.h>
+#include <cmath>
 namespace stl
 {
 

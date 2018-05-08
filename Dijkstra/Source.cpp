@@ -3,7 +3,7 @@
 #include <conio.h>
 #define ESC 27	//27 ASCII of Escape
 #define ONE 49	//49 ASCII of 1
-
+#include <crtdbg.h>
 int main()
 {
 	while(true) {	//i know, looks crappy, but that is only a wrapper instead of GUI to work with this program
@@ -56,10 +56,10 @@ int main()
 	}
 	
 
-	if (_CrtDumpMemoryLeaks())
-		std::cout << "Memory Leaks" << std::endl;
-	else
-		std::cout << "Memory OK" << std::endl;
+    if (_CrtDumpMemoryLeaks())
+        std::cout << "Memory Leaks" << std::endl;
+    else
+        std::cout << "Memory OK" << std::endl;
 	
 	return 0;
 }
