@@ -3,6 +3,7 @@
 #include <windows.h>
 #include <cmath>
 #include <QString>
+#include <set>
 namespace stl
 {
 

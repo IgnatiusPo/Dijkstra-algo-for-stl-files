@@ -18,7 +18,7 @@ void MainWindow::on_pathOK_clicked()
 {
     QString buff = ui->pathLine->text();
     ptr->stl_parse(buff.toStdString());
-    ui->HeaderLabel->setText(ptr->_header);
+    //ui->HeaderLabel->setText(ptr->_header);
 }
 
 void MainWindow::on_EnterSt_clicked()
