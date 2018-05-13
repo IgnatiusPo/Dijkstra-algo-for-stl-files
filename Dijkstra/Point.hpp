@@ -6,7 +6,15 @@
 #include <set>
 
 #include <QString>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+#include <set>
+=======
+>>>>>>> 5cb094bf603630f4d020933c641dbc6a9b351794
+>>>>>>> 73c5636516d1604ec03ac94f2471cd274ac193c9
+>>>>>>> 11cf52da64b6cafc1c676e9a4c0ee68f4b2e4035
 namespace stl
 {
 
