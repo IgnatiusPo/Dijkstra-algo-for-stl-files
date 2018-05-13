@@ -12,12 +12,14 @@ class setPointForm : public QWidget
     Q_OBJECT
 
 public:
-    explicit setPointForm(QWidget *parent = 0);
+    explicit setPointForm(stl::stl_info * data, QWidget *parent = 0);
     ~setPointForm();
-
+    
 private slots:
     void on_OKButton_clicked();
 
+    void on_Find_clicked();
+    
 private:
     Ui::setPointForm *ui;
 };

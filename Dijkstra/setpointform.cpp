@@ -1,7 +1,7 @@
 #include "setpointform.h"
 #include "ui_setpointform.h"
 
-setPointForm::setPointForm(QWidget *parent) :
+setPointForm::setPointForm(stl::stl_info * data,QWidget *parent) :
     QWidget(parent),
     ui(new Ui::setPointForm)
 {
@@ -15,5 +15,13 @@ setPointForm::~setPointForm()
 
 void setPointForm::on_OKButton_clicked()
 {
-    ui->listWidget->cur
+    auto outBack = ui->listWidget->currentItem();
+    
+}
+
+void setPointForm::on_Find_clicked()
+{
+    auto vc = data->getPoints(ui->X->text().toFloat(),ui->Y->text().toFloat(),ui->Z->text().toFloat(), ui->Range->text().toFloat());
+    for(int i = 0; i < vc.size(); ++i)
+        ui->listWidget->addItem(vc[i].);
 }

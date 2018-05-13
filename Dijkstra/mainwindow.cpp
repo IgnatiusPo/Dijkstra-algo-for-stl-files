@@ -23,5 +23,6 @@ void MainWindow::on_pathOK_clicked()
 
 void MainWindow::on_EnterSt_clicked()
 {
+    form = new setPointForm(this->ptr);
     form->show();
 }

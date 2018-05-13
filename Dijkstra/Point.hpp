@@ -2,6 +2,7 @@
 #include <iostream>
 #include <windows.h>
 #include <cmath>
+#include <QString>
 namespace stl
 {
 
@@ -50,6 +51,15 @@ namespace stl
 			out << "x = " << p._x << " y = " << p._y << " z = " << p._z << ' ';
 			return out;
 		}
+        QString get_info()
+        {
+            QString str_x, str_y, str_z, str_res;
+            str_x = _x;
+            str_y = _y;
+            str_z = _z;
+            str_res = str_x + " " + str_y + " " + str_z;
+            return str_res;
+        }
 
 	};
 
@@ -58,7 +68,7 @@ namespace stl
 	class ptr_point_set : public std::set<point*, Compare_coordinates<point*>>   // to do not think about memory i decided to 
 	{																			 // make my own set with virtual destructor 
 	public:
-		ptr_point_set() : std::set<point*, Compare_coordinates<point*>>() {};
+        ptr_point_set() : std::set<point*, Compare_coordinates<point*>>() {}
 		virtual ~ptr_point_set()
 		{
 			auto iter = this->begin();
