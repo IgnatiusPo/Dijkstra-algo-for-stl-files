@@ -77,20 +77,7 @@ namespace stl
 		{
 			return _points.size();
 		}
-		point get_point(int position)	//returning copy of point on this position
-		{
-			if (position < _points.size() && position >= 0) {
-				auto iter = _points.begin();
-				for (int i = 0; i < position; ++i) {
-					iter++;
-				}
-				return *(*iter);							
-			}
-			else {
-				std::cout << "Position is too big or less than zero!" << std::endl;
-				assert(false);		//error
-            }
-		}
+
 		int stl_parse(const std::string & path)	// parsing stl-file, returns 1 if it's OK
 		{
 			std::ifstream file(path.c_str(), std::ios::in | std::ios::binary);
