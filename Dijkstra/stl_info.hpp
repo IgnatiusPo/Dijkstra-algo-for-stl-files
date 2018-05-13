@@ -28,7 +28,7 @@ namespace stl
 	};
 
 
-	class stl_info		// class that contains information from stl-file
+    struct stl_info		// class that contains information from stl-file
 	{					// and methods to work with it
 		std::string _header;
 		uint32_t _num_of_triangles;
