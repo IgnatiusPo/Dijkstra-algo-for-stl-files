@@ -2,11 +2,11 @@
 #include <iostream>
 #include <windows.h>
 #include <cmath>
-<<<<<<< HEAD
+
 #include <set>
-=======
+
 #include <QString>
->>>>>>> 5cb094bf603630f4d020933c641dbc6a9b351794
+
 namespace stl
 {
 
