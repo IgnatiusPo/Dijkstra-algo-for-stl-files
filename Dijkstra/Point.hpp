@@ -2,8 +2,15 @@
 #include <iostream>
 #include <windows.h>
 #include <cmath>
-#include <QString>
+<<<<<<< HEAD
 #include <set>
+=======
+#include <QString>
+<<<<<<< HEAD
+#include <set>
+=======
+>>>>>>> 5cb094bf603630f4d020933c641dbc6a9b351794
+>>>>>>> 73c5636516d1604ec03ac94f2471cd274ac193c9
 namespace stl
 {
 
