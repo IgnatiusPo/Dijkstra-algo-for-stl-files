@@ -26,8 +26,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    setpointform.cpp \
-    Source.cpp
+    setpointform.cpp
 
 HEADERS += \
         mainwindow.h \
