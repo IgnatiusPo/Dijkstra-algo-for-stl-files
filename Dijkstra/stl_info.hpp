@@ -9,7 +9,6 @@
 #include <set>
 #include "Point.hpp"
 #include <cmath>
-#include <vector>
 #define SIZE_HEADER 80
 #define SIZE_POINT sizeof(float)*3
 namespace stl
@@ -29,7 +28,7 @@ namespace stl
 	};
 
 
-    struct stl_info		// class that contains information from stl-file
+	class stl_info		// class that contains information from stl-file
 	{					// and methods to work with it
 		std::string _header;
 		uint32_t _num_of_triangles;
@@ -77,7 +76,20 @@ namespace stl
 		{
 			return _points.size();
 		}
-
+		point get_point(int position)	//returning copy of point on this position
+		{
+			if (position < _points.size() && position >= 0) {
+				auto iter = _points.begin();
+				for (int i = 0; i < position; ++i) {
+					iter++;
+				}
+				return *(*iter);							
+			}
+			else {
+				std::cout << "Position is too big or less than zero!" << std::endl;
+				assert(false);		//error
+			}
+		}
 		int stl_parse(const std::string & path)	// parsing stl-file, returns 1 if it's OK
 		{
 			std::ifstream file(path.c_str(), std::ios::in | std::ios::binary);
@@ -188,35 +200,6 @@ namespace stl
 
 			return answer;	// returning the shortest path from start point to end point
 		}		
-        std::vector<point*> get_points(float  x, float y, float z, float range)
-        {
-
-            auto iter_end = _points.begin(), iter_beg = _points.begin(), iter_temp = _points.begin();
-            bool check = false;
-            while((*iter_temp)->_x <= x+range ) {
-                if(check == false && (*iter_temp)->_x >= x-range ) {
-                    iter_beg = iter_temp;
-                    check = true;
-                }
-                iter_temp++;
-            }
-            iter_end = --iter_temp;
-            std::vector<point*> vc_x(iter_beg,iter_end);
-            std::vector<point*> vc_y;
-            for(int i=0; i < vc_x.size(); ++i) {
-                if(vc_x[i]->_y >= y-range && vc_x[i]->_y <= y+range)
-                    vc_y.push_back(vc_x[i]);
-            }
-
-            std::vector<point*> vc_z;
-            for(int i=0; i < vc_y.size(); ++i) {
-                if(vc_y[i]->_z >= y-range && vc_y[i]->_z <= y+range)
-                    vc_z.push_back(vc_y[i]);
-            }
-
-            return vc_z;
-        }
-
-    };
+	};
 
 }
