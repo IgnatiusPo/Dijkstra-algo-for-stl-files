@@ -14,7 +14,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-
+    stl::point start;
+    stl::point end;
 private slots:
     void on_pathOK_clicked();
 
@@ -24,6 +25,7 @@ private:
     Ui::MainWindow *ui;
     stl::stl_info * ptr;
     setPointForm * form;
+
 };
 
 #endif // MAINWINDOW_H
