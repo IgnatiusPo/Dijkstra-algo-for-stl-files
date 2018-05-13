@@ -33,7 +33,7 @@ namespace stl
 		bool _flag;
 		float _mark;
 
-		point() : _x(0), _y(0), _z(0), _adjacent(), _flag(false), _mark(INFINITY) {};		// in the beginning mark = INF
+        point() : _x(0), _y(0), _z(0), _adjacent(), _flag(false), _mark(INFINITY) {}		// in the beginning mark = INF
 		point(float x, float y, float z) : _x(x), _y(y), _z(z) , _flag(0), _mark(INFINITY) {}
 
 		void set_adjacent(point* p)			
